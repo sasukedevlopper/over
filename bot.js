@@ -73,7 +73,7 @@ client.on("message", msg => {
     var sc = msg.content.substring(msg.content.indexOf(" "));
     eval(sc);
   }
-  if (msg.content.toLowerCase().startsWith(prefix + "cal")) {
+  if (msg.content.toLowerCase().startsWith(prefix + "calc")) {
     var ca = msg.content.substring(msg.content.indexOf(" "));
     msg.reply(ca + " is " + eval(ca).toFixed(2));
   }
@@ -85,10 +85,10 @@ client.on('message', message => {
 if(!message.guild) return
   if(!ar[message.guild.id]) ar[message.guild.id] = {
   onoff: 'Off',
-  role: 'Member'
+  role: '▪️ Membres'
   }
  
-if(message.content.startsWith(`!autorole`)) {
+if(message.content.startsWith(`.mautorole`)) {
          
   let perms = message.member.hasPermission(`MANAGE_ROLES`)
  
@@ -109,7 +109,7 @@ if(message.content.startsWith(`!autorole`)) {
     message.channel.send(`**The AutoRole Has Been Changed to ${newRole}.**`)
   }
         }
-if(message.content === '!info') {
+if(message.content === '.minfo') {
    let perms = message.member.hasPermission(`MANAGE_GUILD`)
    if(!perms) return message.reply(`You don't have permissions.`)
     var embed = new Discord.RichEmbed()
