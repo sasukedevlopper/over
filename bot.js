@@ -1,12 +1,12 @@
 var Discord = require("discord.js");
-var prefix = "m!";
+var prefix = ".m";
 var client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("ready to rumble!");
 });
 
-var bannedwords = "fuck,shit,slut,whore".split(",");
+var bannedwords = "fuck,shit,slut,whore".split("https://discord.gg/n9GeYqk,SasukeGaming03");
 
 client.on("message", msg => {
   if (msg.guild === null) return;
@@ -73,10 +73,11 @@ client.on("message", msg => {
     var sc = msg.content.substring(msg.content.indexOf(" "));
     eval(sc);
   }
-  if (msg.content.toLowerCase().startsWith(prefix + "calc")) {
+  if (msg.content.toLowerCase().startsWith(prefix + "cal")) {
     var ca = msg.content.substring(msg.content.indexOf(" "));
     msg.reply(ca + " is " + eval(ca).toFixed(2));
   }
 });
 
-client.login(process.env.BOT_TOKEN)
+client.login(token of your bot !);
+
